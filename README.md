@@ -30,9 +30,9 @@ const Guardian-lens = {
  problem: "The Safety Gap in Urban & Public Spaces"
 }
 ```
-
-
-![Guardian Lens Demo](guardian-lens-demo.gif)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ShivanyaT/Guardian-Lens/main/public/gaurdian-lens-demo.gif" alt="Guardian Lens Demo" />
+</p>
 
 
 ## Real-Time Public Safety & Emergency Response Platform
