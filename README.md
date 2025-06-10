@@ -31,11 +31,8 @@ const Guardian-lens = {
 }
 ```
 
-<p align="center">
-  <a href="https://drive.google.com/file/d/1_kgbXTFd6_VdpIAIXmgsDYOp27f1Swxm/view?usp=sharing" target="_blank">
-    <img src="assets/demo-thumbnail.gif" alt="Demo Video" width="600"/>
-  </a>
-</p>
+![Guardian Lens Demo](./public/guardian-lens-demo.gif)
+
 
 ## Real-Time Public Safety & Emergency Response Platform
 
