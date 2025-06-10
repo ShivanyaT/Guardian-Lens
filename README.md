@@ -41,17 +41,11 @@
 
 
 ```javascript
-const thai = {
-  pronouns: "she" | "her",
-  code: [Javascript, Typescript, HTML, CSS, Ruby, Python, Java],
-  tools: [React, Redux, Node, Storybook, Styled-Components, Jest, Docker],
-  architecture: ["microservices", "event-driven", "design system pattern"],
-  techCommunities: {
-                        coorganizer: "AfroPython",
-                        speaker: "Latinity",
-                        mentor: "EducaTRANSforma"
-                      },
- challenge: "I am doing the #100DaysOfCode challenge focused on react and typescript"
+const Guardian-lens = {
+  members: [Akshat Saxena, Shivanya Tomar, Tanish Tailor, Raksha Vindya],
+  code: [React, Vite, Typescript, Opencage, Cohere, Supabase, Node.js],
+  category: [Public Safety, Emergency Services, AI for Social Good],
+ problem: "The Safety Gap in Urban & Public Spaces"
 }
 ```
 
@@ -65,13 +59,3 @@ const thai = {
 <img src="https://github.com/fnky/fnky/raw/fnky/img/smile.gif" alt="Smiley" align="center">
 </div>
 </div>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenCage-17202A?style=for-the-badge&logo=opencagedata&logoColor=white" />
-  <img src="https://img.shields.io/badge/Cohere-000000?style=for-the-badge&logo=cohere&logoColor=white" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-</p>
