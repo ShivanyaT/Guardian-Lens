@@ -31,7 +31,7 @@ const Guardian-lens = {
 }
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ShivanyaT/Guardian-Lens/main/public/gaurdian-lens-demo.gif" alt="Guardian Lens Demo" />
+  <img src="gaurdian-lens-demo-ezgif.com-optimize.gif" alt="Guardian Lens Demo" />
 </p>
 
 
