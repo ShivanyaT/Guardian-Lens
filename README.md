@@ -1,8 +1,7 @@
-<div align="center">
-<img src="https://github.com/fnky/fnky/raw/fnky/img/fan-1.gif" alt="Fan" align="center">
-</div>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/your-username/your-repo-name/main/public/guardian-lens-banner.png" alt="Guardian Lens Banner" />
+</p>
 
-# Guardian-Lens
 
 <p align="left">  
 <a href="https://github.com/harish-sethuraman/readme-components">
@@ -11,28 +10,11 @@
    <a href="https://github.com/harish-sethuraman/readme-components">
 <img  src="https://readme-components.vercel.app/api?component=logo&fill=black&logo=typescript&svgfill=2d79c7">
 </a>
-  <a href="https://github.com/harish-sethuraman/readme-components">
-<img  src="https://readme-components.vercel.app/api?component=logo&fill=black&logo=webpack&svgfill=8ed5fa">
-</a>
  <a href="https://github.com/harish-sethuraman/readme-components">
  <img  src="https://readme-components.vercel.app/api?component=logo&fill=black&logo=node.js&svgfill=659b60">
 </a>
 <a href="https://github.com/harish-sethuraman/readme-components">
-<img  src="https://readme-components.vercel.app/api?component=logo&fill=black&logo=ember.js&svgfill=df5c43">  
-</a>
-<a href="https://github.com/harish-sethuraman/readme-components">
-<img  src="https://readme-components.vercel.app/api?component=logo&fill=black&logo=sass&svgfill=cd6799">
-</a>
-
-
-<!-- <a href="https://github.com/harish-sethuraman/readme-components">
-<img  src="https://readme-components.vercel.app/api?component=logo&fill=black&logo=html5&svgfill=f06629">
-</a> -->
-<a href="https://github.com/harish-sethuraman/readme-components">
 <img  src="https://readme-components.vercel.app/api?component=logo&fill=black&logo=javascript&svgfill=f6df1c">
-</a>
-<a href="https://github.com/harish-sethuraman/readme-components">
-<img  src="https://readme-components.vercel.app/api?component=logo&fill=black&logo=CSS3&svgfill=028dd1">
 </a>
 <a href="https://github.com/harish-sethuraman/readme-components">
 <img  src="https://readme-components.vercel.app/api?component=logo&fill=black&logo=github">
@@ -42,7 +24,7 @@
 
 ```javascript
 const Guardian-lens = {
-  members: [Akshat Saxena, Shivanya Tomar, Tanish Tailor, Raksha Vindya],
+  contributors: [Akshat Saxena, Shivanya Tomar, Tanish Tailor, Raksha Vindya],
   code: [React, Vite, Typescript, Opencage, Cohere, Supabase, Node.js],
   category: [Public Safety, Emergency Services, AI for Social Good],
  problem: "The Safety Gap in Urban & Public Spaces"
