@@ -31,6 +31,7 @@ const Guardian-lens = {
 }
 ```
 
+
 ![Guardian Lens Demo](guardian-lens-demo.gif)
 
 
@@ -46,8 +47,6 @@ const Guardian-lens = {
 - Designed for the general public, authorities, volunteers, and disaster teams.  
 - Focuses on rapid response, high accuracy, and location awareness.  
 - Future scope includes integration with local authorities, multilingual support, and predictive safety analytics.
-
-
 
 
 
