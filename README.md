@@ -31,7 +31,7 @@ const Guardian-lens = {
 }
 ```
 
-![Guardian Lens Demo](./public/guardian-lens-demo.gif)
+![Guardian Lens Demo](guardian-lens-demo.gif)
 
 
 ## Real-Time Public Safety & Emergency Response Platform
