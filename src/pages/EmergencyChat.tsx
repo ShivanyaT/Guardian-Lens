@@ -20,7 +20,7 @@ const EmergencyChat: React.FC = () => {
     {
       id: 1,
       sender: 'assistant',
-      text: 'Hello, I\'m the Guardian Lens Emergency Assistant powered by advanced AI. I\'m here to provide immediate guidance for emergency situations. How can I help you today? If this is a life-threatening emergency, please call 911 immediately.',
+      text: 'Hello, I\'m the Guardian Lens Emergency Assistant powered by advanced AI. I\'m here to provide immediate guidance for emergency situations. How can I help you today? If this is a life-threatening emergency, please call 112 immediately.',
       timestamp: new Date(),
     },
   ]);
@@ -88,7 +88,7 @@ const EmergencyChat: React.FC = () => {
       console.error('Chat error:', error);
       toast({
         title: "Connection Error",
-        description: "Unable to reach emergency assistant. For immediate help, call 911.",
+        description: "Unable to reach emergency assistant. For immediate help, call 112.",
         variant: "destructive",
       });
       
