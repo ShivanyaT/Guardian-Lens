@@ -67,7 +67,6 @@ const IncidentReporting: React.FC = () => {
           : 'Your incident report has been submitted successfully.',
       });
 
-      // Reset form
       setFormData({
         title: '',
         description: '',
