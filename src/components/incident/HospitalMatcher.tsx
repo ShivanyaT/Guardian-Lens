@@ -13,7 +13,7 @@ interface Hospital {
   distance: number;
   phone: string;
   specialties: string[];
-  estimatedArrival: number; // minutes
+  estimatedArrival: number;
 }
 
 interface HospitalMatcherProps {
