@@ -30,7 +30,6 @@ const RecentIncidents: React.FC = () => {
     }
   };
 
-  // Helper function to get badge variant based on status
   const getBadgeVariant = (status: string) => {
     switch (status) {
       case 'active':
@@ -46,7 +45,6 @@ const RecentIncidents: React.FC = () => {
     }
   };
 
-  // Helper function to get icon based on incident type
   const getIncidentIcon = (type: string) => {
     switch (type) {
       case 'fire':
@@ -62,7 +60,6 @@ const RecentIncidents: React.FC = () => {
     }
   };
 
-  // Helper function to get status text
   const getStatusText = (status: string) => {
     switch (status) {
       case 'active':
@@ -111,7 +108,6 @@ const RecentIncidents: React.FC = () => {
     );
   }
 
-  // Show only the 4 most recent incidents
   const recentIncidents = incidents.slice(0, 4);
 
   return (
