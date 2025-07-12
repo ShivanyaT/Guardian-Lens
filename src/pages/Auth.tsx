@@ -7,13 +7,15 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Shield } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Shield, UserPlus, Users } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 
 const Auth: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
+  const [role, setRole] = useState<'user' | 'admin'>('user');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
@@ -46,7 +48,7 @@ const Auth: React.FC = () => {
     setError('');
     setMessage('');
     
-    const { error } = await signUp(email, password, fullName);
+    const { error } = await signUp(email, password, fullName, role);
     
     if (error) {
       setError(error.message);
@@ -57,22 +59,22 @@ const Auth: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-guardian-primary/10 to-guardian-secondary/10 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-red-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="flex items-center justify-center mb-8">
-          <div className="rounded-full bg-guardian-info p-3 mr-3">
+          <div className="rounded-full bg-blue-600 p-3 mr-3">
             <div className="rounded-full bg-white p-2">
-              <Shield className="w-8 h-8 text-guardian-info" />
+              <Shield className="w-8 h-8 text-blue-600" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold text-guardian-primary">Guardian Lens</h1>
+          <h1 className="text-3xl font-bold text-blue-600">Guardian Lens</h1>
         </div>
 
         <Card>
           <CardHeader>
-            <CardTitle>Welcome</CardTitle>
+            <CardTitle>Welcome to Guardian Lens</CardTitle>
             <CardDescription>
-              Sign in to your account or create a new one to get started.
+              India's Emergency Response Platform - Sign in or create your account
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -113,6 +115,28 @@ const Auth: React.FC = () => {
               <TabsContent value="signup">
                 <form onSubmit={handleSignUp} className="space-y-4">
                   <div>
+                    <Label htmlFor="signup-role">Account Type</Label>
+                    <Select value={role} onValueChange={(value: 'user' | 'admin') => setRole(value)}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select account type" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="user">
+                          <div className="flex items-center">
+                            <UserPlus className="h-4 w-4 mr-2" />
+                            Citizen/User Account
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="admin">
+                          <div className="flex items-center">
+                            <Users className="h-4 w-4 mr-2" />
+                            Hospital Authority/Admin
+                          </div>
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div>
                     <Label htmlFor="signup-name">Full Name</Label>
                     <Input
                       id="signup-name"
@@ -144,7 +168,7 @@ const Auth: React.FC = () => {
                     />
                   </div>
                   <Button type="submit" className="w-full" disabled={loading}>
-                    {loading ? 'Creating Account...' : 'Sign Up'}
+                    {loading ? 'Creating Account...' : 'Create Account'}
                   </Button>
                 </form>
               </TabsContent>
