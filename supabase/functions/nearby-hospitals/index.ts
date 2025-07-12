@@ -17,7 +17,6 @@ serve(async (req) => {
     
     console.log(`Searching for hospitals near coordinates: ${latitude}, ${longitude}`);
     
-    // Create realistic hospitals from Madhya Pradesh with actual locations
     const madhyaPradeshHospitals = [
       {
         id: "hospital_1",
@@ -131,7 +130,6 @@ serve(async (req) => {
       }
     ];
 
-    // Calculate actual distance from user location to each hospital
     const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => {
       const R = 6371; // Radius of the Earth in km
       const dLat = (lat2 - lat1) * Math.PI / 180;
@@ -144,7 +142,6 @@ serve(async (req) => {
       return R * c;
     };
 
-    // Update distances with actual calculations if coordinates are provided
     const hospitalsWithDistance = madhyaPradeshHospitals.map(hospital => ({
       ...hospital,
       distance: latitude && longitude 
@@ -152,7 +149,6 @@ serve(async (req) => {
         : hospital.distance
     }));
 
-    // Sort by distance
     const sortedHospitals = hospitalsWithDistance.sort((a, b) => a.distance - b.distance);
 
     console.log(`Found ${sortedHospitals.length} hospitals in Madhya Pradesh`);
