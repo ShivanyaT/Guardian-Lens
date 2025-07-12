@@ -1,23 +1,35 @@
 
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import { SidebarProvider } from '@/components/ui/sidebar';
+import { useAuth } from '@/contexts/AuthContext';
 
-const AppLayout: React.FC = () => {
+interface AppLayoutProps {
+  children?: React.ReactNode;
+}
+
+const AppLayout = ({ children }: AppLayoutProps) => {
+  const { user } = useAuth();
+
   return (
-    <SidebarProvider>
-      <div className="min-h-screen flex w-full">
-        <Sidebar />
-        <div className="flex-1 flex flex-col">
-          <Navbar />
-          <main className="flex-1 p-4 md:p-6 overflow-y-auto">
-            <Outlet />
-          </main>
-        </div>
-      </div>
-    </SidebarProvider>
+    <div className="min-h-screen bg-background w-full">
+      <Navbar />
+      {user ? (
+        <SidebarProvider>
+          <div className="flex min-h-screen w-full">
+            <Sidebar />
+            <main className="flex-1 p-6">
+              {children || <Outlet />}
+            </main>
+          </div>
+        </SidebarProvider>
+      ) : (
+        <main className="p-6">
+          {children || <Outlet />}
+        </main>
+      )}
+    </div>
   );
 };
 
