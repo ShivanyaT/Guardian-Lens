@@ -1,58 +1,58 @@
 
-import React from 'react';
 import { Button } from '@/components/ui/button';
-import { SidebarTrigger } from '@/components/ui/sidebar';
-import { User, LogOut } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { Bell, LogOut, User } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const { user, signOut } = useAuth();
+  const navigate = useNavigate();
 
   const handleSignOut = async () => {
-    await signOut();
+    try {
+      await signOut();
+      navigate('/auth');
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
   };
 
   return (
-    <header className="border-b border-border bg-card">
-      <div className="flex h-16 items-center px-4 md:px-6">
-        <SidebarTrigger />
-        <div className="ml-4 flex items-center">
-          <Link to="/" className="flex items-center">
-            <div className="rounded-full bg-blue-600 p-1.5 mr-2">
-              <div className="rounded-full bg-white p-1">
-                <div className="rounded-full bg-blue-600 w-4 h-4"></div>
-              </div>
-            </div>
-            <span className="text-xl font-bold text-primary">Guardian Lens</span>
+    <nav className="bg-white shadow-sm border-b border-gray-200 px-6 py-3">
+      <div className="flex justify-between items-center">
+        <div className="flex items-center space-x-4">
+          <Link to="/" className="text-xl font-bold text-red-600">
+            Emergency Response
           </Link>
         </div>
-        <div className="ml-auto flex items-center space-x-4">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <User className="h-5 w-5" />
+
+        <div className="flex items-center space-x-4">
+          {user ? (
+            <>
+              <Button variant="ghost" size="sm">
+                <Bell className="h-4 w-4" />
               </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem className="font-medium">
-                {user?.email}
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={handleSignOut}>
-                <LogOut className="mr-2 h-4 w-4" />
+              
+              <div className="flex items-center space-x-2">
+                <User className="h-4 w-4" />
+                <span className="text-sm">{user.email}</span>
+              </div>
+
+              <Button variant="ghost" size="sm" onClick={handleSignOut}>
+                <LogOut className="h-4 w-4" />
                 Sign Out
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+              </Button>
+            </>
+          ) : (
+            <Link to="/auth">
+              <Button variant="outline" size="sm">
+                Sign In
+              </Button>
+            </Link>
+          )}
         </div>
       </div>
-    </header>
+    </nav>
   );
 };
 
