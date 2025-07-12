@@ -26,6 +26,11 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/auth" element={<Auth />} />
+            <Route path="/report" element={
+              <AppLayout>
+                <IncidentReporting />
+              </AppLayout>
+            } />
             <Route element={
               <ProtectedRoute>
                 <AppLayout />
@@ -33,7 +38,6 @@ const App = () => (
             }>
               <Route path="/" element={<Dashboard />} />
               <Route path="/map" element={<SafetyMap />} />
-              <Route path="/report" element={<IncidentReporting />} />
               <Route path="/chat" element={<EmergencyChat />} />
               <Route path="/profile" element={<Profile />} />
             </Route>
