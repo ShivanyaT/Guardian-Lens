@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -96,7 +97,7 @@ const EmergencyChat: React.FC = () => {
       const fallbackMessage: Message = {
         id: messages.length + 2,
         sender: 'assistant',
-        text: 'I\'m currently experiencing connectivity issues. If you\'re facing an emergency, please contact emergency services immediately at 911 (US) or your local emergency number.',
+        text: 'I\'m currently experiencing connectivity issues. If you\'re facing an emergency, please contact emergency services immediately at 112 or your local emergency number.',
         timestamp: new Date(),
       };
       
@@ -250,6 +251,47 @@ const EmergencyChat: React.FC = () => {
           </form>
         </CardFooter>
       </Card>
+      
+      {/* Indian Emergency Numbers Card */}
+      <div className="mt-6 mb-6">
+        <Card className="border-red-200 bg-red-50">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-red-700 flex items-center">
+              <Shield className="h-5 w-5 mr-2" />
+              Emergency Numbers - India
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <div className="p-3 bg-red-100 rounded-lg text-center">
+              <h3 className="font-bold text-red-800 text-lg">National Emergency</h3>
+              <p className="text-2xl font-bold text-red-700">112</p>
+              <p className="text-sm text-red-600">All emergencies - Police, Fire, Medical</p>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-2">
+              <div className="p-2 bg-blue-100 rounded text-center">
+                <h4 className="font-semibold text-blue-700 text-sm">Police</h4>
+                <p className="text-lg font-bold text-blue-800">100</p>
+              </div>
+              
+              <div className="p-2 bg-red-100 rounded text-center">
+                <h4 className="font-semibold text-red-700 text-sm">Fire</h4>
+                <p className="text-lg font-bold text-red-800">101</p>
+              </div>
+              
+              <div className="p-2 bg-green-100 rounded text-center">
+                <h4 className="font-semibold text-green-700 text-sm">Ambulance</h4>
+                <p className="text-lg font-bold text-green-800">102</p>
+              </div>
+              
+              <div className="p-2 bg-purple-100 rounded text-center">
+                <h4 className="font-semibold text-purple-700 text-sm">Women Helpline</h4>
+                <p className="text-lg font-bold text-purple-800">1091</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
       
       <div className="mt-6 grid gap-4 grid-cols-1 md:grid-cols-3">
         <Card>
