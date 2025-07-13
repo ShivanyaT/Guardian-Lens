@@ -22,9 +22,8 @@ const Map: React.FC<MapProps> = ({ className }) => {
     try {
       console.log('Searching for location:', locationInput);
       
-      // Mock geocoding - in reality you'd call an API
       const mockCoordinates = {
-        lat: 37.7749 + (Math.random() - 0.5) * 0.1, // Random coordinates around SF
+        lat: 37.7749 + (Math.random() - 0.5) * 0.1, 
         lng: -122.4194 + (Math.random() - 0.5) * 0.1
       };
       
