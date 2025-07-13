@@ -52,7 +52,7 @@ const Map: React.FC<MapProps> = ({ className }) => {
           <CardContent>
             <div className="flex gap-2">
               <Input
-                placeholder="Enter your address (e.g., 123 Main St, San Francisco, CA)"
+                placeholder="Enter your address"
                 value={locationInput}
                 onChange={(e) => setLocationInput(e.target.value)}
                 onKeyPress={handleKeyPress}
