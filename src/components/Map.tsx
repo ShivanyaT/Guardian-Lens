@@ -43,7 +43,6 @@ const Map: React.FC<MapProps> = ({ className }) => {
   return (
     <div className={className}>
       <div className="space-y-6">
-        {/* Location Search */}
         <Card>
           <CardHeader>
             <CardTitle>Find Nearby Hospitals</CardTitle>
@@ -65,7 +64,6 @@ const Map: React.FC<MapProps> = ({ className }) => {
           </CardContent>
         </Card>
 
-        {/* Hospital Results */}
         {searchLocation && (
           <div className="grid gap-6 lg:grid-cols-2">
             <div className="lg:col-span-1">
@@ -95,7 +93,6 @@ const Map: React.FC<MapProps> = ({ className }) => {
           </div>
         )}
 
-        {/* Instructions when no search has been made */}
         {!searchLocation && (
           <Card>
             <CardContent className="text-center py-8">
